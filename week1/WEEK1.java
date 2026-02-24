@@ -46,6 +46,5 @@ public class WEEK1 {
         ///System.out.println(Functions.countBits(7)) ; 
         
         
-        
-     }
+    }
 }
