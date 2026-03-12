@@ -1,7 +1,8 @@
+
 import java.util.ArrayList;
 import java.util.List;
 
-import oop.labor02.BankAccount;
+import week2.BankAccount;
 
 public class Customer {
     private String firstName ;
@@ -15,6 +16,10 @@ public class Customer {
         this.firstName = firtName ;
         this.lastName = lastName ;
         addAccount(account);
+    }
+    public Customer(String firtName , String lastName ) {
+        this.firstName = firtName ;
+        this.lastName = lastName ;
     }
 
     public String getFirstName() {
@@ -41,17 +46,9 @@ public class Customer {
         return "" + firstName + " " + lastName + " " + accounts.stream().map(a -> a.currentState()).reduce("", (a, b) -> a + "\n" + b) ;
     }
 
-    public void addAccount(oop.labor02.BankAccount account) {
-        if(account == null) {
-            return ;
-        }
-        if(numberOfAccounts >= MAX_ACCOUNT) {
-            return ;
-        } else {
+    public void addAccount(BankAccount account) {
             accounts.add(account) ;
-            numberOfAccounts++ ;
-        }
-        
+            numberOfAccounts++ ;      
     }
 
 

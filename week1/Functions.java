@@ -1,6 +1,3 @@
-import java.math.pow;
-import java.lang.Math;
-
 public class Functions {
 
 
@@ -39,7 +36,7 @@ public class Functions {
 
     public static double mean(double array[]) {
         if(array.length == 0) {
-            return Double.Nan ;
+            return Double.NaN ;
         } else {
             double sum = 0.0 ;
             for(int i = 0 ; i < array.length ; i++) {
@@ -50,21 +47,21 @@ public class Functions {
         }
     }
 
-    public static double STD(int array[]) {
+    public static double STD(double array[]) {
 
         if(array.length == 0) {
             return Double.NaN ;
         }
         double mean = mean(array) ;
-        int absSum = 0 ;
+        double absSum = 0.0 ;
         for(int i = 0; i < array.length; i++) {
-            absSum += pow(Math.abs(array[i] - mean) , 2) ;
+            absSum += Math.pow(Math.abs(array[i] - mean) , 2) ;
         }
         return Math.sqrt(absSum / array.length) ;
     }
 
     public static void main(String[] args) {
-    
+        System.out.println("Hello, World!");
     }
     
 }

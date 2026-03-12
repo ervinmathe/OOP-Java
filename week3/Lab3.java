@@ -1,5 +1,6 @@
-import oop.labor02.BankAccount;
+import BankAccount;
 import Customer ;
+
 public class Lab3 {
 
 
